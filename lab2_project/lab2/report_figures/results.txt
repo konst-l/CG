@@ -1,0 +1,24 @@
+GLOBAL THRESHOLDING: image, polarity, T_otsu, IoU_otsu, F1_otsu, T_triangle, IoU_tri, F1_tri
+01_bimodal_dark_objects: dark | 130 | 0.999 | 1.000 | 170 | 0.972 | 0.986
+02_small_light_objects: light | 63 | 0.037 | 0.072 | 95 | 0.768 | 0.868
+03_noisy: dark | 134 | 0.694 | 0.819 | 20 | 0.024 | 0.046
+04_blurred: dark | 132 | 0.975 | 0.987 | 182 | 0.838 | 0.912
+05_low_contrast: dark | 115 | 0.997 | 0.998 | 118 | 0.980 | 0.990
+06_uneven_illumination: dark | 118 | 0.594 | 0.745 | 184 | 0.379 | 0.550
+07_underexposed: light | 31 | 1.000 | 1.000 | 21 | 0.981 | 0.990
+08_overexposed: dark | 217 | 0.999 | 0.999 | 231 | 0.974 | 0.987
+09_small_light_blurred: light | 67 | 0.039 | 0.075 | 94 | 0.776 | 0.874
+
+LINEAR CONTRAST: image, mode, lo, hi, std_before, std_after
+05_low_contrast | minmax | 94 | 136 | 9.8 | 59.3
+05_low_contrast | percentile | 100 | 130 | 9.8 | 82.9
+05_low_contrast | manual | 101 | 130 | 9.8 | 85.6
+07_underexposed | minmax | 0 | 64 | 19.2 | 76.2
+07_underexposed | percentile | 6 | 58 | 19.2 | 93.8
+07_underexposed | manual | 6 | 57 | 19.2 | 95.5
+08_overexposed | minmax | 169 | 255 | 26.5 | 78.4
+08_overexposed | percentile | 181 | 255 | 26.5 | 91.1
+08_overexposed | manual | 182 | 254 | 26.5 | 93.4
+10_color_low_contrast | minmax | 112 | 163 | 6.8 | 34.0
+10_color_low_contrast | percentile | 119 | 155 | 6.8 | 48.2
+10_color_low_contrast | manual | 120 | 154 | 6.8 | 50.8
